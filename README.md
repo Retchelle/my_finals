@@ -31,6 +31,9 @@ admin	admin_id (PK), username, password
 tenant	tenant_id (PK), fname, mname, lname, contact_number, username, email, password
 property	property_id (PK), address, rent_amount, tenant_id (FK), property
 rent	rent_id (PK), tenant_id (FK), property_id (FK), start_date, end_date, rent_amount, status
+payment	payment_id (PK), tenant_id (FK), property_id (FK), amount, payment_date, due_date, status
+maintenance_request	request_id (PK), tenant_id (FK), property_id (FK), request_date, description, status
+
 
 List of PHP Functions and Their Purposes
 Function Name	Purpose
@@ -70,5 +73,3 @@ POST	/api/maintenance/update.php?	Updates maintenance status
 
 
 
-payment	payment_id (PK), tenant_id (FK), property_id (FK), amount, payment_date, due_date, status
-maintenance_request	request_id (PK), tenant_id (FK), property_id (FK), request_date, description, status
