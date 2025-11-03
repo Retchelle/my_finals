@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f7;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #2c3e50;
+  color: #ecf0f1;
+  width: 230px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #3498db;
+}
+
+.sidebar .logout {
+  margin-top: auto;
+  background: #e74c3c;
+  text-align: center;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ✅ Header - smaller font */
+.header {
+  background: #3498db;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.stat {
+  text-align: center;
+  font-weight: bold;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 15px;
+}
+
+.chart-card {
+  text-align: center;
+}
+
+.tables {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 30px;
+}
+
+th {
+  background: #3498db;
+  color: #fff;
+  text-align: left;
+  padding: 14px 20px;
+}
+
+td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  color: #2c3e50;
+}
+
+tr:hover {
+  background-color: #ecf5ff;
+  transition: 0.3s ease;
+}
+
+/* ✅ Status Badge */
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.status.paid {
+  background: #2ecc71;
+  color: white;
+}
+
+.status.pending {
+  background: #f1c40f;
+  color: white;
+}
+
+.status.failed {
+  background: #e74c3c;
+  color: white;
+}
+
+/* ✅ Footer */
+.footer {
+  background: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* ✅ Status Text Colors */
+.status-pending {
+  color: #e67e22;
+  font-weight: bold;
+}
+.status-completed {
+  color: #27ae60;
+  font-weight: bold;
+}
+.status-in-progress {
+  color: #2980b9;
+  font-weight: bold;
+}
